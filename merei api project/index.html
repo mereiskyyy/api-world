@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API WORLD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🌐 API WORLD</h1>
+    <p>Бес түрлі API бір жобада</p>
+</header>
+
+<nav>
+    <button onclick="showPage('products')">Products</button>
+    <button onclick="showPage('currency')">Currency</button>
+    <button onclick="showPage('coffee')">Sample APIs</button>
+    <button onclick="showPage('recipes')">Recipes</button>
+    <button onclick="showPage('universities')">Universities</button>
+</nav>
+
+<main>
+    <section id="products" class="page">
+        <h2>Тауарлар</h2>
+        <input id="productSearch" placeholder="Тауар іздеу">
+        <button onclick="searchProducts()">Іздеу</button>
+        <div id="productList" class="cards"></div>
+    </section>
+
+    <section id="currency" class="page">
+        <h2>Валюта айырбастау</h2>
+        <input id="amount" type="number" value="100">
+        <select id="fromCurrency">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+</select>
+
+<select id="toCurrency">
+    <option value="EUR">EUR</option>
+    <option value="USD">USD</option>
+    <option value="GBP">GBP</option>
+</select>
+        <button onclick="convertCurrency()">Есептеу</button>
+        <h3 id="currencyResult"></h3>
+    </section>
+
+    <section id="coffee" class="page">
+        <h2>Кофе түрлері</h2>
+        <button onclick="loadCoffee()">Көрсету</button>
+        <div id="coffeeList" class="cards"></div>
+    </section>
+
+    <section id="recipes" class="page">
+        <h2>Тағам рецептері</h2>
+        <input id="mealSearch" placeholder="Тағам атауы">
+        <button onclick="searchMeals()">Іздеу</button>
+        <div id="mealList" class="cards"></div>
+    </section>
+
+    <section id="universities" class="page">
+        <h2>Университеттер</h2>
+        <input id="universitySearch" placeholder="Kazakhstan">
+        <button onclick="searchUniversities()">Іздеу</button>
+        <div id="universityList" class="cards"></div>
+    </section>
+</main>
+
+<footer>
+    <p>API WORLD | 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
